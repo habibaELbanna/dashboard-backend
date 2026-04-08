@@ -1,0 +1,146 @@
+.ch__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.ch__card {
+  background: #141414;
+  border: 1px solid #2a2a2a;
+  padding: 20px;
+}
+
+.ch__card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.ch__title {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.ch__card-header .ch__title { margin-bottom: 0; }
+
+.ch__period {
+  color: #6B7280;
+  font-size: 12px;
+}
+
+/* Bar Chart */
+.ch__bar-chart {
+  height: 120px;
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  padding: 12px 8px 0;
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  margin-bottom: 12px;
+}
+
+.ch__bar-group {
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.ch__bar {
+  flex: 1;
+  transition: opacity 0.2s;
+}
+
+.ch__bar--buyers { background: #00A7E5; }
+.ch__bar--vendors { background: rgba(0, 167, 229, 0.4); }
+
+.ch__legend {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.ch__legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: #6B7280;
+}
+
+.ch__legend-dot {
+  width: 8px;
+  height: 8px;
+}
+
+.ch__legend-dot--buyers { background: #00A7E5; }
+.ch__legend-dot--vendors { background: rgba(0, 167, 229, 0.4); }
+
+/* Categories */
+.ch__categories { display: flex; flex-direction: column; gap: 16px; }
+
+.ch__cat-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ch__cat-name {
+  color: #fff;
+  font-size: 13px;
+  width: 120px;
+  flex-shrink: 0;
+}
+
+.ch__cat-bar {
+  flex: 1;
+  height: 6px;
+  background: #1a1a1a;
+}
+
+.ch__cat-fill {
+  height: 100%;
+  background: #00A7E5;
+}
+
+.ch__cat-pct {
+  color: #6B7280;
+  font-size: 12px;
+  width: 36px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+/* Health */
+.ch__health { display: flex; flex-direction: column; }
+
+.ch__health-row {
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ch__health-row--border { border-bottom: 1px solid #1a1a1a; }
+
+.ch__health-name { color: #6B7280; font-size: 13px; }
+
+.ch__health-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ch__health-value { color: #fff; font-size: 13px; font-weight: 700; }
+
+.ch__health-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+@media (max-width: 1024px) { .ch__grid { grid-template-columns: 1fr; } }

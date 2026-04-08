@@ -1,0 +1,76 @@
+.tk__card {
+  background: #141414;
+  border: 1px solid #2a2a2a;
+  padding: 20px;
+}
+
+.tk__header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.tk__title {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.tk__count {
+  color: #FFA500;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 2px 8px;
+  background: rgba(255, 165, 0, 0.12);
+  border: 1px solid rgba(255, 165, 0, 0.3);
+}
+
+.tk__list { display: flex; flex-direction: column; }
+
+.tk__row {
+  height: 44px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.tk__row--border { border-bottom: 1px solid #1a1a1a; }
+
+.tk__text {
+  flex: 1;
+  font-size: 13px;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tk__priority {
+  font-size: 10px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.tk__time {
+  font-size: 11px;
+  color: #6B7280;
+  flex-shrink: 0;
+}
+
+.tk__footer {
+  border-top: 1px solid #1a1a1a;
+  padding-top: 12px;
+  margin-top: 12px;
+  text-align: center;
+}
+
+.tk__viewall {
+  background: none;
+  border: none;
+  color: #00A7E5;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.tk__viewall:hover { text-decoration: underline; }
