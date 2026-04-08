@@ -64,12 +64,6 @@ export default function Sidebar() {
 
   return (
     <aside className="sb__sidebar">
-      {/* Logo */}
-      <div className="sb__logo">
-        <span className="sb__logo-sela">SELA</span>
-        <span className="sb__logo-admin">Admin</span>
-      </div>
-
       {/* Nav */}
       <nav className="sb__nav">
         <p className="sb__section-label">MAIN</p>

@@ -6,14 +6,14 @@
 
 .db__main {
   flex: 1;
-  margin-left: 240px;
+  margin-left: 210px;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
 .db__content {
-  padding: 28px;
+  padding: 24px 28px;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -22,7 +22,7 @@
 
 .db__middle {
   display: grid;
-  grid-template-columns: 1fr 360px;
+  grid-template-columns: 1fr 340px;
   gap: 16px;
 }
 

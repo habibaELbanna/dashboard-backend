@@ -2,32 +2,29 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 16px;
-  margin-bottom: 16px;
 }
 
 .sg__card {
   background: #141414;
   border: 1px solid #2a2a2a;
-  padding: 20px;
+  padding: 20px 22px;
   transition: border-color 0.2s;
 }
 
-.sg__card:hover {
-  border-color: #3a3a3a;
-}
+.sg__card:hover { border-color: #3a3a3a; }
 
 .sg__card-top {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }
 
 .sg__label {
   color: #6B7280;
-  font-size: 12px;
+  font-size: 11px;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
 }
 
 .sg__badge {
@@ -39,21 +36,22 @@
 .sg__badge--up {
   color: #10B981;
   background: rgba(16, 185, 129, 0.12);
-  border: 1px solid rgba(16, 185, 129, 0.3);
+  border: 1px solid rgba(16, 185, 129, 0.25);
 }
 
 .sg__badge--down {
   color: #EF4444;
   background: rgba(239, 68, 68, 0.12);
-  border: 1px solid rgba(239, 68, 68, 0.3);
+  border: 1px solid rgba(239, 68, 68, 0.25);
 }
 
 .sg__value {
-  color: #fff;
-  font-size: 28px;
+  color: #00A7E5;
+  font-size: 32px;
   font-weight: 700;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
   letter-spacing: -0.5px;
+  line-height: 1;
 }
 
 .sg__sub {
