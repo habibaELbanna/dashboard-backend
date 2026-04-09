@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { supabase } from '../supabaseClient';
-import Sidebar from '../components/Sidebar';
-import Topbar from '../components/Topbar';
+import PageLayout from '../components/PageLayout';
 import StatsGrid from '../components/StatsGrid';
 import Activity from '../components/Activity';
 import Verifications from '../components/Verifications';
@@ -43,11 +42,11 @@ export default function Dashboard() {
   useEffect(() => {
     async function fetchStats() {
       try {
-        const { count: users } = await supabase.from('profiles').select('*', { count: 'exact', head: true });
-        const { count: buyers } = await supabase.from('profiles').select('*', { count: 'exact', head: true }).eq('role', 'buyer');
-        const { count: vendors } = await supabase.from('profiles').select('*', { count: 'exact', head: true }).eq('role', 'vendor');
-        const { count: activeNeeds } = await supabase.from('needs').select('*', { count: 'exact', head: true }).eq('status', 'open');
-        const { count: proposals } = await supabase.from('proposals').select('*', { count: 'exact', head: true });
+        const { count: users }       = await supabase.from('profiles').select('*', { count:'exact', head:true });
+        const { count: buyers }      = await supabase.from('profiles').select('*', { count:'exact', head:true }).eq('role','buyer');
+        const { count: vendors }     = await supabase.from('profiles').select('*', { count:'exact', head:true }).eq('role','vendor');
+        const { count: activeNeeds } = await supabase.from('needs').select('*', { count:'exact', head:true }).eq('status','open');
+        const { count: proposals }   = await supabase.from('proposals').select('*', { count:'exact', head:true });
         setStats({ users, buyers, vendors, activeNeeds, proposals });
       } catch(e) { console.error(e); }
     }
@@ -55,24 +54,18 @@ export default function Dashboard() {
   }, []);
 
   return (
-    <div className="db__layout">
-      <Sidebar />
-      <div className="db__main">
-        <Topbar />
-        <div className="db__content">
-          <StatsGrid stats={stats} />
-          <div className="db__middle">
-            <div className="db__middle-left">
-              <Activity activities={ACTIVITIES} />
-            </div>
-            <div className="db__middle-right">
-              <Verifications verifications={VERIFICATIONS} />
-              <Tickets tickets={TICKETS} />
-            </div>
-          </div>
-          <Charts />
+    <PageLayout>
+      <StatsGrid stats={stats} />
+      <div className="db__middle">
+        <div className="db__middle-left">
+          <Activity activities={ACTIVITIES} />
+        </div>
+        <div className="db__middle-right">
+          <Verifications verifications={VERIFICATIONS} />
+          <Tickets tickets={TICKETS} />
         </div>
       </div>
-    </div>
+      <Charts />
+    </PageLayout>
   );
 }
