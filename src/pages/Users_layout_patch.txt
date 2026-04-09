@@ -1,0 +1,38 @@
+In src/pages/Users.jsx:
+
+1. Add this import at the top (after existing imports):
+   import PageLayout from '../components/PageLayout';
+
+2. Remove these imports:
+   import Sidebar from '../components/Sidebar';
+   import Topbar from '../components/Topbar';
+
+3. In the return statement, replace:
+   <div className="us__layout">
+     <Sidebar />
+     <div className="us__main">
+       <Topbar title="Users" subtitle="Manage all registered buyers and vendors" />
+       <div className="us__content">
+         ... (content) ...
+       </div>
+     </div>
+     <UserProfileModal ... />
+   </div>
+
+   With:
+   <PageLayout title="Users" subtitle="Manage all registered buyers and vendors">
+     <div className="us__content">
+       ... (same content, no changes) ...
+     </div>
+     <UserProfileModal ... />
+   </PageLayout>
+
+4. In Users.css, remove or empty these classes (PageLayout handles them now):
+   .us__layout { }
+   .us__main { }
+   .us__content { }
+   
+   Replace with:
+   .us__content { display: flex; flex-direction: column; gap: 16px; }
+
+Do the same pattern for Needs.jsx and Proposals.jsx.

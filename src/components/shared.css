@@ -1,0 +1,89 @@
+/* ============================================================
+   SHARED PAGE STYLES — import in each page's CSS
+   Add @import './shared.css'; at top of Users.css, Needs.css, Proposals.css
+   ============================================================ */
+
+/* Stats grid */
+.pg__stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+.pg__stat-card {
+  background: #141414;
+  border: 1px solid #2a2a2a;
+  padding: 20px 22px;
+}
+.pg__stat-label {
+  color: #6B7280; font-size: 11px;
+  text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 10px;
+}
+.pg__stat-value {
+  color: #00A7E5; font-size: 32px; font-weight: 700;
+  margin-bottom: 6px; letter-spacing: -0.5px; line-height: 1;
+}
+.pg__stat-sub { font-size: 12px; }
+
+/* Table wrapper */
+.pg__table-wrap {
+  background: #141414;
+  border: 1px solid #2a2a2a;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Filters row */
+.pg__filters {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.pg__search-wrap {
+  display: flex; align-items: center; gap: 8px;
+  background: #111; border: 1px solid #2a2a2a;
+  padding: 0 12px; height: 36px; flex: 1; min-width: 180px;
+}
+.pg__search {
+  background: none; border: none; outline: none;
+  color: #fff; font-size: 13px; width: 100%; font-family: inherit;
+}
+.pg__search::placeholder { color: #6B7280; }
+
+/* Pagination */
+.pg__pagination {
+  display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+}
+.pg__pg-info { color: #6B7280; font-size: 13px; flex: 1; }
+.pg__pg-controls { display: flex; align-items: center; gap: 4px; }
+.pg__pg-btn {
+  width: 32px; height: 32px; background: #111; border: 1px solid #2a2a2a;
+  color: #6B7280; font-size: 13px; cursor: pointer;
+  display: flex; align-items: center; justify-content: center; font-family: inherit;
+}
+.pg__pg-btn:hover { color: #fff; }
+.pg__pg-btn--active { background: #00A7E5; border-color: #00A7E5; color: #fff; }
+.pg__pg-dots { color: #6B7280; font-size: 13px; padding: 0 4px; }
+
+/* Loading state */
+.pg__loading {
+  padding: 48px; text-align: center;
+  color: #6B7280; font-size: 13px;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 1024px) {
+  .pg__stats { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .pg__stats { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .pg__stat-value { font-size: 24px; }
+  .pg__stat-label { font-size: 10px; }
+  .hide-sm { display: none !important; }
+}
+
+@media (max-width: 400px) {
+  .pg__stats { grid-template-columns: 1fr 1fr; }
+  .hide-xs { display: none !important; }
+}
