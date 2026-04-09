@@ -1,0 +1,42 @@
+.pst__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.pst__card {
+  background: #141414;
+  border: 1px solid #2a2a2a;
+  padding: 20px 22px;
+  transition: border-color 0.2s;
+}
+
+.pst__card:hover { border-color: #3a3a3a; }
+
+.pst__label {
+  color: #6B7280;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 10px;
+}
+
+.pst__value {
+  color: #00A7E5;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  letter-spacing: -0.5px;
+  line-height: 1;
+}
+
+.pst__sub { font-size: 12px; }
+
+@media (max-width: 1024px) {
+  .pst__grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+  .pst__grid { gap: 10px; }
+  .pst__value { font-size: 24px; }
+  .pst__label { font-size: 10px; }
+}

@@ -1,0 +1,31 @@
+.fp__wrap { display: flex; flex-direction: column; gap: 16px; }
+
+.fp__panel { background: #141414; border: 1px solid #2a2a2a; padding: 18px 20px; }
+.fp__header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; }
+.fp__title { color: #fff; font-size: 14px; font-weight: 700; }
+.fp__badge-red { background: rgba(239,68,68,0.12); color: #EF4444; border: 1px solid rgba(239,68,68,0.3); font-size: 11px; font-weight: 700; padding: 2px 8px; }
+
+.fp__flagged-list { display: flex; flex-direction: column; }
+.fp__flagged-row { display: flex; align-items: flex-start; gap: 10px; padding: 11px 0; border-bottom: 1px solid #1a1a1a; }
+.fp__flagged-row:last-child { border-bottom: none; }
+.fp__av { width: 30px; height: 30px; background: #1f2937; border: 1px solid #374151; display: flex; align-items: center; justify-content: center; font-size: 9px; font-weight: 700; color: #00A7E5; flex-shrink: 0; }
+.fp__flagged-info { flex: 1; min-width: 0; }
+.fp__flagged-name { color: #fff; font-size: 12px; font-weight: 600; margin-bottom: 2px; }
+.fp__flagged-text { color: #6B7280; font-size: 11px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; margin-bottom: 2px; }
+.fp__flagged-time { color: #4B5563; font-size: 11px; }
+.fp__review-btn { background: none; border: 1px solid rgba(0,167,229,0.3); color: #00A7E5; font-size: 11px; font-weight: 600; padding: 4px 10px; cursor: pointer; flex-shrink: 0; font-family: inherit; }
+.fp__review-btn:hover { background: rgba(0,167,229,0.1); }
+.fp__view-all { background: none; border: none; color: #00A7E5; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 10px; padding: 0; display: block; }
+.fp__view-all:hover { text-decoration: underline; }
+
+.fp__reported-list { display: flex; flex-direction: column; }
+.fp__reported-row { padding: 12px 0; border-bottom: 1px solid #1a1a1a; display: flex; flex-direction: column; gap: 3px; }
+.fp__reported-row:last-child { border-bottom: none; }
+.fp__reported-names { color: #fff; font-size: 13px; font-weight: 600; }
+.fp__reported-reason { color: #6B7280; font-size: 12px; }
+.fp__reported-by { color: #4B5563; font-size: 11px; }
+.fp__reported-actions { display: flex; gap: 8px; margin-top: 6px; }
+.fp__resolve-btn { background: none; border: 1px solid rgba(16,185,129,0.4); color: #10B981; font-size: 11px; font-weight: 600; padding: 4px 12px; cursor: pointer; font-family: inherit; }
+.fp__resolve-btn:hover { background: rgba(16,185,129,0.1); }
+.fp__dismiss-btn { background: none; border: 1px solid #2a2a2a; color: #6B7280; font-size: 11px; font-weight: 600; padding: 4px 12px; cursor: pointer; font-family: inherit; }
+.fp__dismiss-btn:hover { color: #fff; }

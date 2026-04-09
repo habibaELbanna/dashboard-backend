@@ -1,0 +1,11 @@
+.ph__card { background: #141414; border: 1px solid #2a2a2a; padding: 20px; }
+.ph__header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; }
+.ph__title { color: #fff; font-size: 14px; font-weight: 700; }
+.ph__live { color: #10B981; font-size: 12px; }
+.ph__list { display: flex; flex-direction: column; }
+.ph__row { display: flex; align-items: center; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #1a1a1a; }
+.ph__row:last-child { border-bottom: none; }
+.ph__label { color: #6B7280; font-size: 13px; }
+.ph__right { display: flex; align-items: center; gap: 8px; }
+.ph__value { color: #fff; font-size: 13px; font-weight: 600; }
+.ph__dot { width: 7px; height: 7px; border-radius: 50%; }

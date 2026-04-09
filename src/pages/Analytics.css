@@ -1,0 +1,68 @@
+.an__content { display: flex; flex-direction: column; gap: 16px; }
+
+.an__card { background: #141414; border: 1px solid #2a2a2a; padding: 20px; }
+.an__card-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; flex-wrap: wrap; gap: 8px; }
+.an__title { color: #fff; font-size: 14px; font-weight: 700; }
+.an__sub { color: #6B7280; font-size: 12px; }
+.an__badge { font-size: 11px; font-weight: 700; padding: 2px 8px; }
+.an__badge--up   { color: #10B981; background: rgba(16,185,129,0.12); border: 1px solid rgba(16,185,129,0.3); }
+.an__badge--down { color: #EF4444; background: rgba(239,68,68,0.12);  border: 1px solid rgba(239,68,68,0.3);  }
+
+.an__row2 { display: grid; grid-template-columns: 1fr 260px; gap: 16px; }
+.an__row3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
+.an__row4 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+/* Bars */
+.an__bars { display: flex; align-items: flex-end; gap: 14px; height: 130px; background: #111; border: 1px solid #2a2a2a; padding: 10px 12px 0; margin-bottom: 10px; }
+.an__bar-col { display: flex; flex-direction: column; align-items: center; gap: 4px; flex: 1; }
+.an__bar-posted  { background: #00A7E5; width: 100%; }
+.an__bar-expired { background: rgba(0,167,229,0.3); width: 100%; }
+.an__bar-lbl { color: #6B7280; font-size: 11px; margin-top: 4px; }
+.an__bar-legend { display: flex; justify-content: center; gap: 16px; margin-bottom: 10px; }
+.an__bar-legend span { display: flex; align-items: center; gap: 6px; color: #6B7280; font-size: 11px; }
+.an__ld { width: 8px; height: 8px; display: inline-block; }
+.an__totals { display: flex; justify-content: space-between; border-top: 1px solid #2a2a2a; padding-top: 12px; }
+.an__totals span { color: #6B7280; font-size: 12px; }
+.an__totals strong { margin-left: 4px; color: #fff; }
+
+/* Funnel */
+.an__funnel { display: flex; flex-direction: column; gap: 12px; }
+.an__funnel-item { display: flex; flex-direction: column; gap: 4px; }
+.an__funnel-bar { height: 30px; background: #00A7E5; display: flex; align-items: center; padding: 0 12px; color: #fff; font-size: 13px; font-weight: 700; }
+.an__funnel-meta { display: flex; justify-content: space-between; color: #6B7280; font-size: 11px; }
+
+/* Categories */
+.an__categories { display: flex; flex-direction: column; gap: 12px; }
+.an__cat-row { display: flex; align-items: center; gap: 8px; }
+.an__cat-num { color: #6B7280; font-size: 12px; width: 14px; flex-shrink: 0; }
+.an__cat-name { color: #fff; font-size: 12px; width: 110px; flex-shrink: 0; }
+.an__cat-bar { flex: 1; height: 4px; background: #1a1a1a; }
+.an__cat-fill { height: 100%; background: #00A7E5; }
+.an__cat-pct { color: #6B7280; font-size: 11px; width: 28px; text-align: right; flex-shrink: 0; }
+
+/* Geo */
+.an__geo { display: flex; flex-direction: column; gap: 10px; }
+.an__geo-row { display: flex; align-items: center; gap: 10px; }
+.an__geo-city { color: #fff; font-size: 13px; width: 100px; flex-shrink: 0; }
+.an__geo-bar { flex: 1; height: 6px; background: #1a1a1a; }
+.an__geo-fill { height: 100%; background: #00A7E5; }
+.an__geo-count { color: #6B7280; font-size: 12px; width: 48px; text-align: right; flex-shrink: 0; }
+.an__geo-pct { color: #6B7280; font-size: 12px; width: 28px; text-align: right; flex-shrink: 0; }
+
+/* Table */
+.an__table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.an__table { width: 100%; border-collapse: collapse; font-size: 13px; min-width: 560px; }
+.an__table thead tr { border-bottom: 1px solid #2a2a2a; }
+.an__table th { color: #6B7280; font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; padding: 10px 14px; text-align: left; white-space: nowrap; }
+.an__table td { padding: 12px 14px; border-bottom: 1px solid #1a1a1a; color: #6B7280; }
+.an__table tbody tr:last-child td { border-bottom: none; }
+.an__table tbody tr:hover { background: #181818; }
+.an__td-white { color: #fff !important; font-weight: 500; }
+
+@media (max-width: 1200px) { .an__row3 { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 1024px) {
+  .an__row2 { grid-template-columns: 1fr; }
+  .an__row3 { grid-template-columns: 1fr; }
+  .an__row4 { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) { .an__sub { display: none; } }
