@@ -1,0 +1,133 @@
+.rtm__overlay {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.75);
+  z-index: 300;
+  display: flex; align-items: center; justify-content: center;
+  padding: 20px;
+}
+
+.rtm__modal {
+  width: 720px; max-width: 100%;
+  background: #141414; border: 1px solid #2a2a2a;
+  display: flex; flex-direction: column;
+  max-height: 90vh; overflow: hidden;
+}
+
+/* Header */
+.rtm__header {
+  display: flex; align-items: center; gap: 12px;
+  padding: 16px 20px; border-bottom: 1px solid #2a2a2a;
+}
+.rtm__title {
+  color: #fff; font-size: 15px; font-weight: 700;
+  flex: 1; text-transform: capitalize;
+}
+.rtm__lang-group { display: flex; gap: 0; }
+.rtm__lang {
+  background: #1a1a1a; border: 1px solid #2a2a2a;
+  color: #6B7280; font-size: 11px; font-weight: 700;
+  padding: 4px 12px; cursor: pointer; font-family: inherit;
+}
+.rtm__lang--active { background: #00A7E5; border-color: #00A7E5; color: #fff; }
+.rtm__close {
+  background: none; border: none; color: #6B7280;
+  font-size: 18px; cursor: pointer; line-height: 1;
+}
+.rtm__close:hover { color: #fff; }
+
+/* Toolbar */
+.rtm__toolbar {
+  display: flex; align-items: center; flex-wrap: wrap;
+  gap: 0; padding: 8px 12px; border-bottom: 1px solid #2a2a2a;
+  background: #111;
+}
+.rtm__toolbar-group {
+  display: flex; align-items: center;
+  border-right: 1px solid #2a2a2a; padding: 0 6px; gap: 2px;
+}
+.rtm__toolbar-group:last-child { border-right: none; }
+.rtm__toolbar-btn {
+  width: 28px; height: 28px;
+  background: none; border: none; color: #d1d5db;
+  font-size: 13px; cursor: pointer; font-family: inherit;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.15s;
+}
+.rtm__toolbar-btn:hover { background: #2a2a2a; }
+.rtm__toolbar-color {
+  width: 18px; height: 18px; border: none; cursor: pointer;
+  margin: 0 2px;
+}
+
+/* Body */
+.rtm__body {
+  flex: 1; overflow-y: auto; min-height: 200px;
+  padding: 16px 20px;
+}
+.rtm__textarea {
+  width: 100%; min-height: 180px;
+  background: transparent; border: none; outline: none;
+  color: #d1d5db; font-size: 14px; font-family: inherit;
+  line-height: 1.7; resize: none;
+  box-sizing: border-box;
+}
+.rtm__textarea--ar { text-align: right; }
+.rtm__textarea::placeholder { color: #4B5563; }
+
+/* Slug */
+.rtm__slug-section {
+  border-top: 1px solid #2a2a2a; padding: 14px 20px;
+  background: #111;
+}
+.rtm__slug-label {
+  color: #6B7280; font-size: 12px; font-weight: 600;
+  margin-bottom: 8px; display: flex; align-items: center; gap: 6px;
+}
+.rtm__slug-info {
+  color: #6B7280; font-size: 12px; cursor: help;
+}
+.rtm__slug-row {
+  display: flex; align-items: center; gap: 0;
+  background: #0e0e0e; border: 1px solid #2a2a2a;
+}
+.rtm__slug-base {
+  color: #6B7280; font-size: 12px; padding: 8px 12px;
+  border-right: 1px solid #2a2a2a; white-space: nowrap;
+  flex-shrink: 0;
+}
+.rtm__slug-input {
+  flex: 1; background: none; border: none; outline: none;
+  color: #fff; font-size: 13px; padding: 8px 12px; font-family: inherit;
+}
+.rtm__slug-check { color: #10B981; padding: 0 8px; font-size: 14px; }
+.rtm__slug-auto {
+  background: #1a1a1a; border: none; border-left: 1px solid #2a2a2a;
+  color: #6B7280; font-size: 12px; padding: 8px 12px;
+  cursor: pointer; font-family: inherit; white-space: nowrap;
+  transition: color 0.15s;
+}
+.rtm__slug-auto:hover { color: #fff; }
+.rtm__slug-hint { color: #6B7280; font-size: 11px; margin-top: 6px; }
+
+/* Footer */
+.rtm__footer {
+  display: flex; align-items: center; gap: 10px;
+  padding: 14px 20px; border-top: 1px solid #2a2a2a;
+}
+.rtm__word-count { color: #6B7280; font-size: 12px; flex: 1; }
+.rtm__cancel {
+  background: none; border: 1px solid #2a2a2a; color: #6B7280;
+  font-size: 13px; padding: 8px 16px; cursor: pointer; font-family: inherit;
+}
+.rtm__cancel:hover { color: #fff; }
+.rtm__save {
+  background: #00A7E5; color: #fff; border: none;
+  font-size: 13px; font-weight: 600; padding: 8px 20px;
+  cursor: pointer; font-family: inherit;
+}
+.rtm__save:hover { opacity: 0.85; }
+
+@media (max-width: 640px) {
+  .rtm__modal { max-height: 100vh; }
+  .rtm__toolbar { display: none; }
+}
