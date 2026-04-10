@@ -1,0 +1,21 @@
+.ma__content { display: flex; flex-direction: column; gap: 16px; }
+
+.ma__grid {
+  display: grid;
+  grid-template-columns: 220px 1fr 260px;
+  gap: 16px;
+  align-items: start;
+}
+
+@media (max-width: 1200px) {
+  .ma__grid { grid-template-columns: 200px 1fr; }
+  .ma__grid > :last-child { grid-column: 1 / -1; }
+}
+@media (max-width: 768px) {
+  .ma__grid { grid-template-columns: 1fr; }
+}
+
+/* 5-stat override for Mobile App */
+.ma__content .pst__grid { grid-template-columns: repeat(5, 1fr); }
+@media (max-width: 1200px) { .ma__content .pst__grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 640px)  { .ma__content .pst__grid { grid-template-columns: repeat(2, 1fr); } }

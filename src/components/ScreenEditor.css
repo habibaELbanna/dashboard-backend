@@ -1,0 +1,27 @@
+.se__card { background: #141414; border: 1px solid #2a2a2a; display: flex; flex-direction: column; }
+.se__header { display: flex; align-items: center; gap: 10px; padding: 14px 16px; border-bottom: 1px solid #2a2a2a; flex-wrap: wrap; }
+.se__title { color: #fff; font-size: 14px; font-weight: 700; }
+.se__screen-badge { background: #00A7E5; color: #fff; font-size: 11px; font-weight: 600; padding: 3px 10px; }
+.se__save-btn { background: #00A7E5; color: #fff; border: none; padding: 6px 14px; font-size: 12px; font-weight: 600; cursor: pointer; font-family: inherit; margin-left: auto; }
+.se__save-btn:hover { opacity: 0.85; }
+
+/* Phone mockup */
+.se__phone-wrap { display: flex; justify-content: center; padding: 20px 16px; background: #111; border-bottom: 1px solid #2a2a2a; }
+.se__phone { width: 160px; background: #0e0e0e; border: 2px solid #2a2a2a; border-radius: 20px; padding: 12px 8px; display: flex; flex-direction: column; gap: 8px; }
+.se__phone-notch { width: 40px; height: 6px; background: #2a2a2a; border-radius: 3px; margin: 0 auto 4px; }
+.se__phone-screen { display: flex; flex-direction: column; gap: 8px; }
+.se__phone-bar { display: flex; align-items: center; justify-content: space-between; padding: 4px 6px; background: #141414; border: 1px solid #2a2a2a; }
+.se__phone-title { color: #fff; font-size: 10px; font-weight: 600; }
+.se__phone-block { height: 52px; background: #1a1a1a; border: 1px solid #2a2a2a; }
+.se__phone-block--active { border-color: #00A7E5; border-width: 2px; }
+
+/* Editable elements */
+.se__elements { padding: 12px 0; }
+.se__elements-label { color: #6B7280; font-size: 10px; font-weight: 700; letter-spacing: 0.1em; padding: 6px 16px 10px; text-transform: uppercase; }
+.se__element-row { display: flex; align-items: center; gap: 10px; padding: 10px 16px; border-bottom: 1px solid #1a1a1a; }
+.se__element-row:last-child { border-bottom: none; }
+.se__element-icon { width: 24px; height: 24px; background: #1a1a1a; border: 1px solid #2a2a2a; color: #6B7280; font-size: 11px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.se__element-label { color: #6B7280; font-size: 12px; width: 130px; flex-shrink: 0; }
+.se__element-value { color: #fff; font-size: 12px; flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.se__edit-btn { background: none; border: 1px solid #2a2a2a; color: #00A7E5; font-size: 11px; font-weight: 600; padding: 3px 10px; cursor: pointer; font-family: inherit; flex-shrink: 0; }
+.se__edit-btn:hover { background: rgba(0,167,229,0.1); }

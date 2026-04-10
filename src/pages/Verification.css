@@ -1,0 +1,9 @@
+.vf__content { display: flex; flex-direction: column; gap: 16px; }
+
+.vf__tabs { display: flex; border-bottom: 1px solid #2a2a2a; }
+.vf__tab { background: none; border: none; border-bottom: 2px solid transparent; color: #6B7280; font-size: 13px; padding: 8px 20px 8px 0; cursor: pointer; font-family: inherit; white-space: nowrap; margin-bottom: -1px; display: flex; align-items: center; gap: 8px; }
+.vf__tab--active { color: #fff; border-bottom-color: #00A7E5; }
+.vf__tab-count { background: #00A7E5; color: #fff; font-size: 11px; font-weight: 700; padding: 1px 8px; }
+
+@media (max-width: 1024px) { }
+@media (max-width: 640px) { }

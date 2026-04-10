@@ -1,31 +1,23 @@
 import { BrowserRouter, Routes, Route, Navigate, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 
-import Dashboard          from './pages/Dashboard';
-import Users              from './pages/Users';
-import Needs              from './pages/Needs';
-import Proposals          from './pages/Proposals';
-import Messages           from './pages/Messages';
-import Analytics          from './pages/Analytics';
-import PlatformSettings   from './pages/PlatformSettings';
-import ContentManagement  from './pages/ContentManagement';
-import Marketing    from './pages/Marketing';
-import Support      from './pages/Support';
-import AdminRoles   from './pages/AdminRoles';
-import ActivityLog  from './pages/ActivityLog';
+import Dashboard         from './pages/Dashboard';
+import Users             from './pages/Users';
+import Needs             from './pages/Needs';
+import Proposals         from './pages/Proposals';
+import Messages          from './pages/Messages';
+import Analytics         from './pages/Analytics';
+import PlatformSettings  from './pages/PlatformSettings';
+import ContentManagement from './pages/ContentManagement';
+import Marketing         from './pages/Marketing';
+import Support           from './pages/Support';
+import AdminRoles        from './pages/AdminRoles';
+import ActivityLog       from './pages/ActivityLog';
+import Verification      from './pages/Verification';
+import MobileApp         from './pages/MobileApp';
+
 import loginImage from './Assets/login.svg';
 
-
-function PlaceholderPage({ title }) {
-  return (
-    <div style={{ display:'flex', alignItems:'center', justifyContent:'center', minHeight:'100vh', background:'#0e0e0e', flexDirection:'column', gap:'12px' }}>
-      <p style={{ color:'#6B7280', fontSize:'11px', letterSpacing:'0.15em', textTransform:'uppercase' }}>Coming soon</p>
-      <h2 style={{ color:'#fff', fontSize:'24px', fontWeight:600, margin:0 }}>{title}</h2>
-    </div>
-  );
-}
-
-// ── Login ──────────────────────────────────────────────────────────────────
 function Login() {
   const [email,    setEmail]    = useState('');
   const [password, setPassword] = useState('');
@@ -53,16 +45,32 @@ function Login() {
             <p style={{ color:'#6B7280', fontSize:'13px', margin:0 }}>Sign in to the admin panel</p>
           </div>
           <div style={{ display:'flex', flexDirection:'column', gap:'12px' }}>
-            <input type="email" placeholder="Email" value={email} onChange={e => setEmail(e.target.value)}
+            <input
+              type="email"
+              placeholder="Email"
+              value={email}
+              onChange={e => setEmail(e.target.value)}
               style={{ background:'#111', border:'1px solid #2a2a2a', color:'#fff', padding:'12px 16px', fontSize:'13px', outline:'none', fontFamily:'inherit', width:'100%', boxSizing:'border-box' }}
-              onFocus={e => e.target.style.borderColor='#00A7E5'} onBlur={e => e.target.style.borderColor='#2a2a2a'}/>
-            <input type="password" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)} onKeyDown={e => e.key==='Enter' && handleLogin()}
+              onFocus={e => e.target.style.borderColor='#00A7E5'}
+              onBlur={e  => e.target.style.borderColor='#2a2a2a'}
+            />
+            <input
+              type="password"
+              placeholder="Password"
+              value={password}
+              onChange={e => setPassword(e.target.value)}
+              onKeyDown={e => e.key === 'Enter' && handleLogin()}
               style={{ background:'#111', border:'1px solid #2a2a2a', color:'#fff', padding:'12px 16px', fontSize:'13px', outline:'none', fontFamily:'inherit', width:'100%', boxSizing:'border-box' }}
-              onFocus={e => e.target.style.borderColor='#00A7E5'} onBlur={e => e.target.style.borderColor='#2a2a2a'}/>
+              onFocus={e => e.target.style.borderColor='#00A7E5'}
+              onBlur={e  => e.target.style.borderColor='#2a2a2a'}
+            />
           </div>
-          <button onClick={handleLogin}
+          <button
+            onClick={handleLogin}
             style={{ background:'#00A7E5', color:'#fff', border:'none', padding:'13px', fontSize:'13px', fontWeight:600, cursor:'pointer', fontFamily:'inherit' }}
-            onMouseEnter={e => e.target.style.opacity='0.85'} onMouseLeave={e => e.target.style.opacity='1'}>
+            onMouseEnter={e => e.target.style.opacity='0.85'}
+            onMouseLeave={e => e.target.style.opacity='1'}
+          >
             Sign In
           </button>
         </div>
@@ -71,7 +79,6 @@ function Login() {
   );
 }
 
-// ── Routes ─────────────────────────────────────────────────────────────────
 export default function Routing() {
   return (
     <BrowserRouter>
@@ -85,14 +92,12 @@ export default function Routing() {
         <Route path="/analytics" element={<Analytics />} />
         <Route path="/settings"  element={<PlatformSettings />} />
         <Route path="/content"   element={<ContentManagement />} />
+        <Route path="/vendors"   element={<Verification />} />
+        <Route path="/mobile"    element={<MobileApp />} />
         <Route path="/marketing" element={<Marketing />} />
-<Route path="/support"   element={<Support />} />
-<Route path="/roles"     element={<AdminRoles />} />
-<Route path="/activity"  element={<ActivityLog />} />
-        <Route path="/vendors"   element={<PlaceholderPage title="Verification" />} />
-        <Route path="/mobile"    element={<PlaceholderPage title="Mobile App" />} />
-
-     
+        <Route path="/support"   element={<Support />} />
+        <Route path="/roles"     element={<AdminRoles />} />
+        <Route path="/activity"  element={<ActivityLog />} />
         <Route path="*"          element={<Navigate to="/login" replace />} />
       </Routes>
     </BrowserRouter>
