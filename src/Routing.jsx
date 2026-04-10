@@ -9,10 +9,13 @@ import Messages           from './pages/Messages';
 import Analytics          from './pages/Analytics';
 import PlatformSettings   from './pages/PlatformSettings';
 import ContentManagement  from './pages/ContentManagement';
-
+import Marketing    from './pages/Marketing';
+import Support      from './pages/Support';
+import AdminRoles   from './pages/AdminRoles';
+import ActivityLog  from './pages/ActivityLog';
 import loginImage from './Assets/login.svg';
 
-// ── Placeholder ────────────────────────────────────────────────────────────
+
 function PlaceholderPage({ title }) {
   return (
     <div style={{ display:'flex', alignItems:'center', justifyContent:'center', minHeight:'100vh', background:'#0e0e0e', flexDirection:'column', gap:'12px' }}>
@@ -82,12 +85,14 @@ export default function Routing() {
         <Route path="/analytics" element={<Analytics />} />
         <Route path="/settings"  element={<PlatformSettings />} />
         <Route path="/content"   element={<ContentManagement />} />
+        <Route path="/marketing" element={<Marketing />} />
+<Route path="/support"   element={<Support />} />
+<Route path="/roles"     element={<AdminRoles />} />
+<Route path="/activity"  element={<ActivityLog />} />
         <Route path="/vendors"   element={<PlaceholderPage title="Verification" />} />
         <Route path="/mobile"    element={<PlaceholderPage title="Mobile App" />} />
-        <Route path="/marketing" element={<PlaceholderPage title="Marketing" />} />
-        <Route path="/support"   element={<PlaceholderPage title="Support" />} />
-        <Route path="/roles"     element={<PlaceholderPage title="Admin Roles" />} />
-        <Route path="/activity"  element={<PlaceholderPage title="Activity Log" />} />
+
+     
         <Route path="*"          element={<Navigate to="/login" replace />} />
       </Routes>
     </BrowserRouter>

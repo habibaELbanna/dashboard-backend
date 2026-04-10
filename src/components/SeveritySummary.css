@@ -1,0 +1,9 @@
+.ss2__card { background: #141414; border: 1px solid #2a2a2a; padding: 18px 20px; }
+.ss2__header { margin-bottom: 14px; }
+.ss2__title { color: #fff; font-size: 14px; font-weight: 700; }
+.ss2__list { display: flex; flex-direction: column; gap: 12px; }
+.ss2__row { display: flex; align-items: center; gap: 10px; }
+.ss2__badge { font-size: 10px; font-weight: 700; padding: 3px 8px; white-space: nowrap; width: 68px; text-align: center; flex-shrink: 0; }
+.ss2__count { color: #fff; font-size: 13px; font-weight: 600; width: 28px; flex-shrink: 0; }
+.ss2__bar { flex: 1; height: 6px; background: #1a1a1a; }
+.ss2__fill { height: 100%; }

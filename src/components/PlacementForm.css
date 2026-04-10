@@ -1,0 +1,33 @@
+.pf__card { background: #141414; border: 1px solid #2a2a2a; padding: 24px; display: flex; flex-direction: column; gap: 16px; max-width: 620px; }
+.pf__title { color: #fff; font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+.pf__label { color: #6B7280; font-size: 12px; display: block; margin-bottom: 6px; }
+.pf__req { color: #EF4444; }
+.pf__field { display: flex; flex-direction: column; }
+
+.pf__type-btns { display: flex; gap: 0; }
+.pf__type-btn { background: #111; border: 1px solid #2a2a2a; color: #6B7280; font-size: 13px; padding: 8px 16px; cursor: pointer; font-family: inherit; }
+.pf__type-btn--active { background: #00A7E5; border-color: #00A7E5; color: #fff; }
+
+.pf__search-wrap { display: flex; align-items: center; gap: 8px; background: #111; border: 1px solid #2a2a2a; padding: 0 12px; height: 40px; }
+.pf__search { background: none; border: none; outline: none; color: #fff; font-size: 13px; width: 100%; font-family: inherit; }
+.pf__search::placeholder { color: #6B7280; }
+
+.pf__selected { display: flex; align-items: center; gap: 10px; background: #111; border: 1px solid #2a2a2a; padding: 10px 14px; margin-top: 6px; }
+.pf__selected-star { color: #FFA500; font-size: 16px; }
+.pf__selected-name { color: #fff; font-size: 13px; font-weight: 600; margin-bottom: 2px; }
+.pf__selected-sub { color: #6B7280; font-size: 11px; }
+.pf__selected-remove { background: none; border: none; color: #6B7280; font-size: 14px; cursor: pointer; margin-left: auto; }
+.pf__selected-remove:hover { color: #EF4444; }
+
+.pf__row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.pf__input { background: #111; border: 1px solid #2a2a2a; color: #fff; font-size: 13px; padding: 10px 12px; outline: none; font-family: inherit; height: 40px; box-sizing: border-box; width: 100%; }
+.pf__input:focus { border-color: #00A7E5; }
+.pf__textarea { background: #111; border: 1px solid #2a2a2a; color: #fff; font-size: 13px; padding: 10px 12px; outline: none; font-family: inherit; resize: vertical; width: 100%; box-sizing: border-box; }
+.pf__textarea:focus { border-color: #00A7E5; }
+.pf__textarea::placeholder { color: #6B7280; }
+
+.pf__duration { background: #111; border: 1px solid #2a2a2a; color: #6B7280; font-size: 12px; padding: 8px 14px; }
+.pf__submit { background: #00A7E5; color: #fff; border: none; padding: 13px; font-size: 13px; font-weight: 600; cursor: pointer; font-family: inherit; width: 100%; margin-top: 4px; }
+.pf__submit:hover { opacity: 0.85; }
+
+@media (max-width: 640px) { .pf__row2 { grid-template-columns: 1fr; } }

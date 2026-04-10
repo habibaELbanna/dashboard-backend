@@ -1,0 +1,42 @@
+.al__content { display: flex; flex-direction: column; gap: 16px; }
+.al__grid { display: grid; grid-template-columns: 1fr 280px; gap: 16px; align-items: start; }
+.al__left { display: flex; flex-direction: column; gap: 16px; }
+.al__right { display: flex; flex-direction: column; gap: 16px; }
+
+.al__filters { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.al__search-wrap { display: flex; align-items: center; gap: 8px; background: #111; border: 1px solid #2a2a2a; padding: 0 12px; height: 36px; flex: 1; min-width: 180px; }
+.al__search { background: none; border: none; outline: none; color: #fff; font-size: 13px; width: 100%; font-family: inherit; }
+.al__search::placeholder { color: #6B7280; }
+.al__select { background: #111; border: 1px solid #2a2a2a; color: #fff; font-size: 13px; height: 36px; padding: 0 28px 0 10px; cursor: pointer; font-family: inherit; outline: none; }
+.al__clear { background: none; border: none; color: #6B7280; font-size: 13px; cursor: pointer; font-family: inherit; }
+.al__clear:hover { color: #fff; }
+
+.al__table-wrap { background: #141414; border: 1px solid #2a2a2a; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.al__loading { padding: 48px; text-align: center; color: #6B7280; font-size: 13px; }
+.al__table { width: 100%; border-collapse: collapse; font-size: 13px; min-width: 480px; }
+.al__table td { padding: 13px 14px; border-bottom: 1px solid #1a1a1a; vertical-align: middle; }
+.al__table tbody tr:last-child td { border-bottom: none; }
+.al__table tbody tr:hover { background: #181818; }
+.al__action-col { min-width: 280px; }
+.al__action-text { color: #fff; font-size: 13px; }
+.al__badge { font-size: 10px; font-weight: 700; padding: 3px 8px; white-space: nowrap; }
+.al__muted { color: #6B7280; font-size: 12px; }
+
+.al__logins-card { background: #141414; border: 1px solid #2a2a2a; padding: 18px 20px; }
+.al__logins-title { color: #fff; font-size: 14px; font-weight: 700; margin-bottom: 14px; }
+.al__login-row { display: flex; align-items: center; gap: 10px; padding: 10px 0; border-bottom: 1px solid #1a1a1a; }
+.al__login-row:last-child { border-bottom: none; }
+.al__login-av { width: 30px; height: 30px; background: rgba(0,167,229,0.15); border: 1px solid rgba(0,167,229,0.3); color: #00A7E5; font-size: 9px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.al__login-info { flex: 1; min-width: 0; }
+.al__login-name { color: #fff; font-size: 12px; font-weight: 600; margin-bottom: 2px; }
+.al__login-ip { color: #6B7280; font-size: 11px; }
+.al__login-right { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; }
+.al__login-time { color: #6B7280; font-size: 11px; white-space: nowrap; }
+.al__login-dot { width: 7px; height: 7px; border-radius: 50%; background: #10B981; }
+.al__login-dot--fail { background: #EF4444; }
+
+@media (max-width: 1024px) { .al__grid { grid-template-columns: 1fr; } }
+@media (max-width: 640px) {
+  .al__hide-sm { display: none !important; }
+  .al__hide-md { display: none !important; }
+}
